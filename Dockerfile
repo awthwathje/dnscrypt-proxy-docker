@@ -4,11 +4,14 @@ WORKDIR /app
 
 ADD dnscrypt-proxy.toml /app/dnscrypt-proxy.toml
 
-RUN apt update
+RUN apt update && \
+    apt upgrade --yes && \
+    apt install --yes ca-certificates dnscrypt-proxy
 
-RUN apt upgrade --yes
+RUN groupadd -r dnscrypt --gid=65053 && \
+    useradd -r -g dnscrypt --uid=65053 dnscrypt
 
-RUN apt install --yes ca-certificates dnscrypt-proxy
+USER dnscrypt
 
 RUN mkdir /var/log/dnscrypt-proxy
 
