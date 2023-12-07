@@ -6,6 +6,8 @@ ADD dnscrypt-proxy.toml /app/dnscrypt-proxy.toml
 
 RUN apt update
 
+RUN apt upgrade --yes
+
 RUN apt install --yes ca-certificates dnscrypt-proxy
 
 RUN mkdir /var/log/dnscrypt-proxy
