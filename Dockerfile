@@ -11,9 +11,10 @@ RUN apt update && \
 RUN groupadd -r dnscrypt --gid=65053 && \
     useradd -r -g dnscrypt --uid=65053 dnscrypt
 
-USER dnscrypt
+RUN mkdir /var/log/dnscrypt-proxy && \
+    chown dnscrypt:dnscrypt /var/log/dnscrypt-proxy
 
-RUN mkdir /var/log/dnscrypt-proxy
+USER dnscrypt
 
 EXPOSE 53
 
