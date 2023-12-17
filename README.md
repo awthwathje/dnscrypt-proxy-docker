@@ -14,10 +14,10 @@ services:
     ports:
       - 53:53
     environment:
-      - SERVER_NAMES=google,cloudflare,wikimedia # optional
+      - SERVER_NAMES=cloudflare,wikimedia # optional
 ```
 
-Issuing `docker-compose up` command will run the app on port `53`. If you omit the `SERVER_NAMES`, the predefined servers from the default config will be used, which are `cloudflare` and `google`.
+Issuing `docker-compose up` command will run the app on port `53`. If you omit the `SERVER_NAMES`, the predefined servers from the default config will be used, which is `cloudflare` only.
 
 ### Environment variables
 
@@ -25,7 +25,7 @@ You can pass the following env variables to the container.
 
 | Name | Example | Description |
 |----------|----------|----------|
-|   `SERVER_NAMES`   |   `google,cloudflare,wikimedia`   |   Comma-separated list of server names to use. |
+|   `SERVER_NAMES`   |   `cloudflare,wikimedia`   |   Comma-separated list of server names to use. |
 
 ## If you want to use your own config file
 

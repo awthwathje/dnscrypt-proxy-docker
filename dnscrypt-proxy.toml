@@ -1,5 +1,5 @@
 listen_addresses = ['0.0.0.0:53']
-server_names = ['cloudflare', 'google']
+server_names = ['cloudflare']
 
 [query_log]
   file = '/var/log/dnscrypt-proxy/query.log'
