@@ -41,3 +41,4 @@ services:
     volumes:
       - ./dnscrypt-proxy.toml:/app/dnscrypt-proxy.toml
 ```
+
