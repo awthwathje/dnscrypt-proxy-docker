@@ -31,6 +31,8 @@ You can pass the following env variables to the container.
 
 If you have your own `dnscrypt-proxy.toml`, you can mount it to `/app/dnscrypt-proxy.toml` and it will be used instead of a provided one:
 
+Example `docker-compose.yml` config:
+
 ```yaml
 version: "3.8"
 services:
