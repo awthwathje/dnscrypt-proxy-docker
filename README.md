@@ -1,4 +1,5 @@
-# dnscrypt-proxy-docker
+dnscrypt-proxy-docker
+=
 
 This project makes the Dockerized [dnscrypt-proxy](https://github.com/DNSCrypt/dnscrypt-proxy) from the latest Alpine available for the general public.
 
